@@ -1,0 +1,18 @@
+<script>
+    function reverseString(string) {
+        const reversedString = string.split('').reverse().join('');
+        return reversedString === string;
+    }
+
+    // UNIT TEST
+    const expected  = true
+    const actual = reverseString("namaaman")
+
+    if(expected === actual){
+        console.log("Test Passed")
+    } else {
+        console.log("Test Failed")
+    }
+
+    console.log(reverseString("namaaman"))
+</script>

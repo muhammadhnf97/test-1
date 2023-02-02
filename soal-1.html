@@ -1,0 +1,29 @@
+<script>
+    const fishBash = (num) => {
+        const array = []
+        for (let i = 1; i <= num; i++) {
+            if (i % 15 === 0) {
+                array.push(`fish bash`);
+            } else if (i % 3 === 0) {
+                array.push("fish");
+            } else if (i % 5 === 0) {
+                array.push("bash");
+            } else {
+                array.push(i)
+            }
+        }
+        return array
+    }
+
+    //UNIT TEST
+    const expected = [1, 2, 'fish', 4, 'bash', 'fish', 7, 8, 'fish', 'bash', 11, 'fish', 13, 14, 'fish bash']
+    const actual = fishBash(15)
+
+    if(JSON.stringify(expected) === JSON.stringify(actual)){
+        console.log("Test passed")
+    } else {
+        console.log("Test failed")
+    }
+    
+    console.log(fishBash(15))
+</script>

@@ -1,0 +1,39 @@
+<script>
+    const sortingNaik = (array) => {
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array.length; j++) {
+                if (array[j] > array[j + 1]) {
+                    [array[j], array[j + 1]] = [array[j + 1], array[j]];
+                }
+            }
+        }
+    return array;
+    }
+    
+    const sortingTurun = (array) => {
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array.length; j++) {
+                if (array[j] < array[j + 1]) {
+                    [array[j], array[j + 1]] = [array[j + 1], array[j]];
+                }
+            }
+        }
+    return array;
+    }
+
+    //UNIT TEST
+    const expectedNaik = [1, 2, 2, 4, 4, 4, 6, 6, 7]
+    const actualNaik = sortingNaik([2,1,2,4,6,4,7,4,6])
+    const expectedTurun = [7, 6, 6, 4, 4, 4, 2, 2, 1]
+    const actualTurun = sortingTurun([2,1,2,4,6,4,7,4,6])
+
+    if(JSON.stringify(expectedNaik) === JSON.stringify(actualNaik) && JSON.stringify(expectedTurun) === JSON.stringify(actualTurun)){
+        console.log("Test Passed")
+    } else {
+        console.log("Test Failed")
+    }
+    
+
+    console.log(actualNaik)
+    console.log(actualTurun)
+</script>
